@@ -20,11 +20,14 @@ public class PageEmailController {
         Random random = new Random();
         Email emailToSave = new Email(email,random.nextBoolean());
         
+        Email savedEmail = emailRepository.save(emailToSave);
+        return savedEmail;
+
         //Agregar logica para guardar el objeto emailToSave en la base de datos
         // y al mismo tiempo regresar el objeto guardado
         //Y retornarlo en lugar de new Email();
 
-        return new Email();
+        ///return new Email();
     }
     
 }
